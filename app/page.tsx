@@ -1,5 +1,4 @@
 "use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -8,10 +7,10 @@ export default function Portfolio() {
   useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {
-      link.addEventListener('click', e => {
+      link.addEventListener("click", e => {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target?.scrollIntoView({ behavior: 'smooth' });
+        const target = document.querySelector(link.getAttribute("href"));
+        target?.scrollIntoView({ behavior: "smooth" });
       });
     });
   }, []);
@@ -77,47 +76,72 @@ export default function Portfolio() {
       {/* Experience Section */}
       <section id="experience" className="max-w-4xl mx-auto px-6 py-20">
         <h2 className="text-3xl font-semibold mb-6">Experience</h2>
-        <div className="space-y-6">
+
+        <div className="space-y-10">
+          {/* Procyon */}
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold">Software Engineer — Procyon Technostructure LLC</h3>
-              <p className="text-sm text-gray-400 mb-2">Remote, USA | Jun 2025 – Present</p>
-              <ul className="list-disc ml-5 text-gray-300">
-                <li>Secured financial APIs with JWT authentication achieving 99.99% uptime and SOC2 compliance.</li>
-                <li>Reduced response times by 30% via Redis caching on analytics endpoints.</li>
-                <li>Migrated backend to Flask microservice on AWS Lambda reducing ops overhead by 30%.</li>
-                <li>Automated integration tests with PyTest and Postman ensuring endpoint reliability.</li>
-                <li>Enhanced team velocity by 20% through structured sprint planning in Jira.</li>
-              </ul>
+            <CardContent className="p-6 flex items-start gap-6">
+              <img
+                src="/companies/procyon.png"
+                alt="Procyon Technostructure"
+                className="w-20 h-20 object-contain rounded-md bg-white p-2"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">Software Engineer — Procyon Technostructure LLC</h3>
+                <p className="text-sm text-gray-400 mb-2">Remote, USA | Jun 2025 – Present</p>
+                <ul className="list-disc ml-5 text-gray-300">
+                  <li>Secured financial APIs with JWT authentication achieving 99.99% uptime and SOC2 compliance.</li>
+                  <li>Reduced response times by 30% via Redis caching on analytics endpoints.</li>
+                  <li>Migrated backend to Flask microservice on AWS Lambda reducing ops overhead by 30%.</li>
+                  <li>Automated integration tests with PyTest and Postman ensuring endpoint reliability.</li>
+                  <li>Enhanced team velocity by 20% through structured sprint planning in Jira.</li>
+                </ul>
+              </div>
             </CardContent>
           </Card>
 
+          {/* Morgan Stanley */}
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold">Software Engineer — Morgan Stanley</h3>
-              <p className="text-sm text-gray-400 mb-2">Atlanta, USA | Jul 2024 – Jun 2025</p>
-              <ul className="list-disc ml-5 text-gray-300">
-                <li>Built a Python web crawler improving data feed efficiency to the LLM pipeline by 60%.</li>
-                <li>Developed Django + PySpark embedding service reducing manual data processing by 50%.</li>
-                <li>Automated pipeline deployments with Python scripts and regression tests.</li>
-                <li>Integrated RAG systems using Elasticsearch + OpenAI APIs for scalable data retrieval.</li>
-                <li>Engineered NoSQL data architectures (MongoDB) for real-time analytics dashboards.</li>
-                <li>Improved system resilience by streamlining Kafka event-based payment workflows.</li>
-              </ul>
+            <CardContent className="p-6 flex items-start gap-6">
+              <img
+                src="/companies/morganstanley.png"
+                alt="Morgan Stanley"
+                className="w-20 h-20 object-contain rounded-md bg-white p-2"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">Software Engineer — Morgan Stanley</h3>
+                <p className="text-sm text-gray-400 mb-2">Atlanta, USA | Jul 2024 – Jun 2025</p>
+                <ul className="list-disc ml-5 text-gray-300">
+                  <li>Built a Python web crawler improving data feed efficiency to the LLM pipeline by 60%.</li>
+                  <li>Developed Django + PySpark embedding service reducing manual data processing by 50%.</li>
+                  <li>Automated pipeline deployments with Python scripts and regression tests.</li>
+                  <li>Integrated RAG systems using Elasticsearch + OpenAI APIs for scalable data retrieval.</li>
+                  <li>Engineered NoSQL data architectures (MongoDB) for real-time analytics dashboards.</li>
+                  <li>Improved system resilience by streamlining Kafka event-based payment workflows.</li>
+                </ul>
+              </div>
             </CardContent>
           </Card>
 
+          {/* Accenture */}
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold">Application Software Engineer — Accenture</h3>
-              <p className="text-sm text-gray-400 mb-2">Hyderabad, India | Feb 2021 – Aug 2022</p>
-              <ul className="list-disc ml-5 text-gray-300">
-                <li>Built and deployed 110+ REST APIs using FastAPI and Flask with full test coverage.</li>
-                <li>Established 20+ Jenkins pipelines with automated test and deployment stages.</li>
-                <li>Migrated 20+ microservices to AWS reducing infrastructure cost by 70%.</li>
-                <li>Implemented Kafka replay mechanisms for production debugging and log analysis.</li>
-                <li>Conducted 50+ code reviews cutting critical bugs by 15% and improving code standards.</li>
-              </ul>
+            <CardContent className="p-6 flex items-start gap-6">
+              <img
+                src="/companies/accenture.png"
+                alt="Accenture"
+                className="w-20 h-20 object-contain rounded-md bg-white p-2"
+              />
+              <div>
+                <h3 className="text-xl font-semibold">Application Software Engineer — Accenture</h3>
+                <p className="text-sm text-gray-400 mb-2">Hyderabad, India | Feb 2021 – Aug 2022</p>
+                <ul className="list-disc ml-5 text-gray-300">
+                  <li>Built and deployed 110+ REST APIs using FastAPI and Flask with full test coverage.</li>
+                  <li>Established 20+ Jenkins pipelines with automated test and deployment stages.</li>
+                  <li>Migrated 20+ microservices to AWS reducing infrastructure cost by 70%.</li>
+                  <li>Implemented Kafka replay mechanisms for production debugging and log analysis.</li>
+                  <li>Conducted 50+ code reviews cutting critical bugs by 15% and improving code standards.</li>
+                </ul>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -130,7 +154,9 @@ export default function Portfolio() {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">uApply — Skill-Based Job Recommendation System</h3>
-              <p className="text-gray-300 mb-3">Flask + ReactJS app leveraging LLMs and NLP to match students’ skills with 150+ jobs.</p>
+              <p className="text-gray-300 mb-3">
+                Flask + ReactJS app leveraging LLMs and NLP to match students’ skills with 150+ jobs.
+              </p>
               <ul className="list-disc ml-5 text-gray-300">
                 <li>Designed end-to-end data flow using embeddings and FAISS indexing.</li>
                 <li>Built test-driven APIs validated through automated GitHub Actions CI/CD.</li>
@@ -141,7 +167,9 @@ export default function Portfolio() {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">Health Club Portal</h3>
-              <p className="text-gray-300 mb-3">Full-stack app (Angular + Flask) for managing memberships and activities.</p>
+              <p className="text-gray-300 mb-3">
+                Full-stack app (Angular + Flask) for managing memberships and activities.
+              </p>
               <ul className="list-disc ml-5 text-gray-300">
                 <li>Integrated Google Authentication and AWS EC2 auto-scaling.</li>
                 <li>Added Postman API test collections into Jenkins build pipelines.</li>
@@ -152,7 +180,9 @@ export default function Portfolio() {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-2">Indeed.com Simulation</h3>
-              <p className="text-gray-300 mb-3">Three-tier distributed app replicating core Indeed functionalities.</p>
+              <p className="text-gray-300 mb-3">
+                Three-tier distributed app replicating core Indeed functionalities.
+              </p>
               <ul className="list-disc ml-5 text-gray-300">
                 <li>Implemented Kafka messaging and Redis caching for high availability.</li>
                 <li>Used Passport-JWT for secure user authentication.</li>
@@ -165,8 +195,28 @@ export default function Portfolio() {
       {/* Education & Contact */}
       <section id="contact" className="max-w-4xl mx-auto px-6 py-20">
         <h2 className="text-3xl font-semibold mb-4">Education</h2>
-        <p className="text-gray-300">M.S. in Computer Engineering — San Jose State University (2024)</p>
-        <p className="text-gray-300 mb-8">B.E. in Electronics & Communication — CBIT Hyderabad (2020)</p>
+
+        <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
+          <img
+            src="/companies/san jose state University.png"
+            alt="San Jose State University"
+            className="w-20 h-20 object-contain rounded-md bg-white p-2"
+          />
+          <p className="text-gray-300">
+            M.S. in Computer Engineering — San Jose State University (2024)
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row md:items-center gap-6 mb-8">
+          <img
+            src="/companies/cbit.jpeg"
+            alt="CBIT"
+            className="w-20 h-20 object-contain rounded-md bg-white p-2"
+          />
+          <p className="text-gray-300">
+            B.E. in Electronics & Communication — CBIT Hyderabad (2020)
+          </p>
+        </div>
 
         <h2 className="text-3xl font-semibold mb-4">Contact</h2>
         <p className="text-gray-300 mb-4">Email: amreenmahenaz@gmail.com</p>
@@ -176,7 +226,9 @@ export default function Portfolio() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-center py-6 border-t border-gray-800">
-        <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Mahenaz Amreen | Built with Next.js & TailwindCSS</p>
+        <p className="text-gray-400 text-sm">
+          © {new Date().getFullYear()} Mahenaz Amreen | Built with Next.js & TailwindCSS
+        </p>
         <div className="flex justify-center gap-6 mt-3">
           <a href="https://github.com/amreenmahenaz" target="_blank" rel="noreferrer" className="hover:text-white">GitHub</a>
           <a href="https://linkedin.com/in/mahenaz" target="_blank" rel="noreferrer" className="hover:text-white">LinkedIn</a>
