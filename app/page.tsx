@@ -9,17 +9,13 @@ export default function Portfolio() {
     links.forEach(link => {
       link.addEventListener("click", e => {
         e.preventDefault();
-
         const href = link.getAttribute("href");
-        if (!href) return; // ✅ prevents the null type error
-
+        if (!href) return; // ✅ Fix TypeScript null error
         const target = document.querySelector(href);
         target?.scrollIntoView({ behavior: "smooth" });
       });
     });
   }, []);
-
-
 
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 scroll-smooth">
@@ -70,12 +66,12 @@ export default function Portfolio() {
       <section id="tech" className="max-w-5xl mx-auto px-6 py-20">
         <h2 className="text-3xl font-semibold mb-8 text-center">Tech Stack</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-          <Card><CardContent className="p-4">Python, Java, C++, JavaScript</CardContent></Card>
-          <Card><CardContent className="p-4">Flask, Django, Node.js, Spring Boot</CardContent></Card>
-          <Card><CardContent className="p-4">PyTest, Postman, Jenkins, GitHub Actions</CardContent></Card>
-          <Card><CardContent className="p-4">AWS (EC2, Lambda, RDS, S3), Docker, Kubernetes</CardContent></Card>
-          <Card><CardContent className="p-4">Kafka, RabbitMQ, Elasticsearch, CloudWatch</CardContent></Card>
-          <Card><CardContent className="p-4">MySQL, PostgreSQL, MongoDB, DynamoDB, Redis</CardContent></Card>
+          <Card><CardContent><div className="p-4">Python, Java, C++, JavaScript</div></CardContent></Card>
+          <Card><CardContent><div className="p-4">Flask, Django, Node.js, Spring Boot</div></CardContent></Card>
+          <Card><CardContent><div className="p-4">PyTest, Postman, Jenkins, GitHub Actions</div></CardContent></Card>
+          <Card><CardContent><div className="p-4">AWS (EC2, Lambda, RDS, S3), Docker, Kubernetes</div></CardContent></Card>
+          <Card><CardContent><div className="p-4">Kafka, RabbitMQ, Elasticsearch, CloudWatch</div></CardContent></Card>
+          <Card><CardContent><div className="p-4">MySQL, PostgreSQL, MongoDB, DynamoDB, Redis</div></CardContent></Card>
         </div>
       </section>
 
@@ -158,7 +154,7 @@ export default function Portfolio() {
         <h2 className="text-3xl font-semibold mb-6">Projects</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <Card>
-            <CardContent className="p-6">
+            <CardContent><div className="p-6">
               <h3 className="text-xl font-semibold mb-2">uApply — Skill-Based Job Recommendation System</h3>
               <p className="text-gray-300 mb-3">
                 Flask + ReactJS app leveraging LLMs and NLP to match students’ skills with 150+ jobs.
@@ -167,11 +163,10 @@ export default function Portfolio() {
                 <li>Designed end-to-end data flow using embeddings and FAISS indexing.</li>
                 <li>Built test-driven APIs validated through automated GitHub Actions CI/CD.</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div></CardContent></Card>
 
           <Card>
-            <CardContent className="p-6">
+            <CardContent><div className="p-6">
               <h3 className="text-xl font-semibold mb-2">Health Club Portal</h3>
               <p className="text-gray-300 mb-3">
                 Full-stack app (Angular + Flask) for managing memberships and activities.
@@ -180,11 +175,10 @@ export default function Portfolio() {
                 <li>Integrated Google Authentication and AWS EC2 auto-scaling.</li>
                 <li>Added Postman API test collections into Jenkins build pipelines.</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div></CardContent></Card>
 
           <Card>
-            <CardContent className="p-6">
+            <CardContent><div className="p-6">
               <h3 className="text-xl font-semibold mb-2">Indeed.com Simulation</h3>
               <p className="text-gray-300 mb-3">
                 Three-tier distributed app replicating core Indeed functionalities.
@@ -193,8 +187,7 @@ export default function Portfolio() {
                 <li>Implemented Kafka messaging and Redis caching for high availability.</li>
                 <li>Used Passport-JWT for secure user authentication.</li>
               </ul>
-            </CardContent>
-          </Card>
+            </div></CardContent></Card>
         </div>
       </section>
 
