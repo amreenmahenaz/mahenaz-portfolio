@@ -4,16 +4,19 @@ import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 
 export default function Portfolio() {
-  useEffect(() => {
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach(link => {
-      link.addEventListener("click", e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute("href"));
-        target?.scrollIntoView({ behavior: "smooth" });
-      });
+useEffect(() => {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      const href = link.getAttribute("href");
+      if (!href) return; // ✅ fixes the TypeScript error
+      const target = document.querySelector(href);
+      target?.scrollIntoView({ behavior: "smooth" });
     });
-  }, []);
+  });
+}, []);
+
 
   return (
     <main className="min-h-screen bg-gray-950 text-gray-100 scroll-smooth">
