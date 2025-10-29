@@ -56,8 +56,8 @@ export default function Portfolio() {
       <section id="about" className="max-w-4xl mx-auto px-6 py-20">
         <h2 className="text-3xl font-semibold mb-4">About</h2>
         <p className="text-gray-300 leading-relaxed">
-          I'm a Software Engineer who enjoys solving complex backend challenges and improving system reliability through automation and clean architecture.
-          I've developed production-grade systems in Python, Flask, Django, and Node.js, integrating Kafka, Redis, and AWS to deliver scalable APIs and fault-tolerant data pipelines.
+          I&apos;m a Software Engineer who enjoys solving complex backend challenges and improving system reliability through automation and clean architecture.
+          I&apos;ve developed production-grade systems in Python, Flask, Django, and Node.js, integrating Kafka, Redis, and AWS to deliver scalable APIs and fault-tolerant data pipelines.
           My focus is building systems that not only work — but work consistently, with solid testing, monitoring, and CI/CD practices. I take pride in writing clean, testable code, mentoring teammates, and improving engineering efficiency through process automation.
         </p>
       </section>
@@ -164,7 +164,7 @@ export default function Portfolio() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">uApply — Skill-Based Job Recommendation System</h3>
                 <p className="text-gray-300 mb-3">
-                  Flask + ReactJS app leveraging LLMs and NLP to match students' skills with 150+ jobs.
+                  Flask + ReactJS app leveraging LLMs and NLP to match students&apos; skills with 150+ jobs.
                 </p>
                 <ul className="list-disc ml-5 text-gray-300">
                   <li>Designed end-to-end data flow using embeddings and FAISS indexing.</li>
